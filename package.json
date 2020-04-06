@@ -1,0 +1,12 @@
+{
+  "name": "drogasil-back",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "http://github.com/drogasil-back",
+  "author": "Vitor Santos",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
