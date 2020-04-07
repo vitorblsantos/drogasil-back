@@ -1,5 +1,5 @@
 const express = require('express')()
-const router = require('./controller/routes')
+const router = require('./routes/')
 
 express.use('/', router)
 express.listen(1998)

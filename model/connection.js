@@ -1,7 +1,7 @@
-const sqlite3 = require("sqlite3");
+const sqlite3 = require('sqlite3').verbose()
 
-const connection = new sqlite3.Database("../db/db.sql", (err) =>
-  console.error("db con error", err)
-);
-
-module.exports = connection;
+module.exports = class Connection {
+  constructor () {
+    return new sqlite3.Database('../database.sqlite', (err) => (err || ''))
+  }
+}
