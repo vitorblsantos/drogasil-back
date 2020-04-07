@@ -11,7 +11,8 @@
     "express": "^4.17.1",
     "nodemon": "^2.0.2",
     "sqlite3": "^4.1.1",
-    "standard": "^14.3.3"
+    "standard": "^14.3.3",
+    "typescript": "^3.8.3"
   },
   "scripts": {
     "start": "concurrently --kill-others-on-fail \"standard --fix \" \"nodemon server.js\""
