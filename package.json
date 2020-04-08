@@ -20,7 +20,7 @@
   "dependencies": {},
   "scripts": {
     "migrate": "node model/migrate.js",
-    "start": "concurrently --kill-others-on-fail \"yarn migrate\" \"standard --fix \" \"nodemon server.js\"",
+    "start": "concurrently --kill-others-on-fail \"standard --fix \" \"yarn migrate\" \"node server.js\"",
     "test": "node node_modules/.bin/mocha",
     "debug": "nodemon --inspect server"
   },
