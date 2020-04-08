@@ -29,7 +29,7 @@ try {
         const { count } = rows[0];
         if (count > 0) return;
         data.map(async (single) => {
-          return await db.all(
+          await db.all(
             "INSERT INTO routes(origin,dest,price,status) VALUES(?,?,?,?)",
             [single[0], single[1], single[2], true],
             (err) => err 
