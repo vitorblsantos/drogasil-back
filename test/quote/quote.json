@@ -2,13 +2,5 @@
   "quoteVerified": {
       "from":"GRU",
       "to":"BRC"
-  },
-  "quoteLarge": {
-    "from":"GRU",
-    "to":"CDG"
-  },
-  "quoteError": {
-    "from":"GRU",
-    "to":"GRU"
   }
 }
