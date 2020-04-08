@@ -1,5 +1,5 @@
-# Drogasil-Frontend
-Drogasil frontend test
+# Drogasil-Backend
+Drogasil backend test
 
 ### Start
 Install the dependencies and run yarn start
