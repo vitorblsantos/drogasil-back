@@ -1,0 +1,17 @@
+{
+  "routeVerified": {
+    "from": "GRU",
+    "to": "HME",
+    "price": "10"
+  },
+  "routeDuplicate": {
+    "from": "GRU",
+    "to": "BRC",
+    "price": "10"
+  },
+  "routeError": {
+    "from": "GRU",
+    "to": "",
+    "price": "10"
+  }
+}
