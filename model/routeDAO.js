@@ -1,11 +1,11 @@
 const Connection = require('./connection')
 
-const conn = new Connection()
+const db = new Connection()
 
 const saveRoute = async (origin, destination, price) => {
   return new Promise((resolve, reject) => {
     try {
-      conn.run(
+      db.run(
         'INSERT INTO routes(origin,dest,price,status)values(?,?,?,?)',
         [origin, destination, price, true],
         (err) => (!err ? resolve('Route saved') : '')

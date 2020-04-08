@@ -1,16 +1,26 @@
-const { route } = require('../controller')
+const { route, quote } = require('../controller')
 const router = require('express').Router()
 
 router.get('/', (req, res) => {
   res.send('<h1>Server Working</h1>')
 })
 
-router.post('/route', (req, res) => {
+router.get('/quote/:from/:to', async (req, res) => {
+  try {
+    const { from, to } = req.params
+    // await quote(from, to);
+    res.send(await quote(from, to))
+  } catch {
+    res.send('Controller error - Quote')
+  }
+})
+
+router.post('/route', async (req, res) => {
   try {
     const { from, to, price } = req.body
-    route(from, to, price).then((response) => res.send(response))
+    res.send(await route(from, to, price))
   } catch {
-    res.send('Erro no padrão: route/<FROM>/<TO>/<PRICE>')
+    res.send('Controller error - Route')
   }
 })
 

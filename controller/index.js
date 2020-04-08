@@ -1,5 +1,7 @@
 const route = require('./route')
+const quote = require('./quote')
 
 module.exports = {
-  route
+  route,
+  quote
 }
