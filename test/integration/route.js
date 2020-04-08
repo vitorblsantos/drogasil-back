@@ -1,3 +1,5 @@
+const routeVerified = require('./route.json').routeVerified;
+
 describe("Route - Endpoint", () => {
   describe("POST /route", () => {
     it("200", (done) => {
