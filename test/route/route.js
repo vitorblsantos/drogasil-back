@@ -14,13 +14,12 @@ describe("Route - Endpoint", () => {
       .post("/route")
       .send(routeVerified)
       .end((err, res) => {
-        if (!err) {
-          expect(res).to.have.status(200);
-          expect(res.body).to.be.a("object");
-          expect(res.body.status).to.be.an("string");
-          expect(res.body.status).to.be.equal("route saved");
-          done();
-        }
+        if (err) return err;
+        expect(res).to.have.status(200);
+        expect(res.body).to.be.a("object");
+        expect(res.body.status).to.be.an("string");
+        expect(res.body.status).to.be.equal("route saved");
+        done();
       });
   });
 
@@ -30,13 +29,12 @@ describe("Route - Endpoint", () => {
       .post("/route")
       .send(routeError)
       .end((err, res) => {
-        if (!err) {
-          expect(res).to.have.status(200);
-          expect(res.body).to.be.a("object");
-          expect(res.body.status).to.be.an("string");
-          expect(res.body.status).to.be.equal("some params could not be read");
-          done();
-        }
+        if (err) return err;
+        expect(res).to.have.status(200);
+        expect(res.body).to.be.a("object");
+        expect(res.body.status).to.be.an("string");
+        expect(res.body.status).to.be.equal("some params could not be read");
+        done();
       });
   });
 
@@ -46,13 +44,12 @@ describe("Route - Endpoint", () => {
       .post("/route")
       .send(routeDuplicate)
       .end((err, res) => {
-        if (!err) {
-          expect(res).to.have.status(200);
-          expect(res.body).to.be.a("object");
-          expect(res.body.status).to.be.an("string");
-          expect(res.body.status).to.be.equal("value duplicated");
-          done();
-        }
+        if (err) return err;
+        expect(res).to.have.status(200);
+        expect(res.body).to.be.a("object");
+        expect(res.body.status).to.be.an("string");
+        expect(res.body.status).to.be.equal("value duplicated");
+        done();
       });
   });
 });
