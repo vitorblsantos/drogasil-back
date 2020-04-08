@@ -14,8 +14,7 @@ const data = [
 
 try {
   db.run(
-    `
-    CREATE TABLE IF NOT EXISTS routes (
+    `CREATE TABLE IF NOT EXISTS routes (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       origin CHAR(3),
       dest CHAR(3),
