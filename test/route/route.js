@@ -17,7 +17,7 @@ describe('Route - Endpoint', () => {
         if (err) return err
         expect(res).to.have.status(200)
         expect(res.body).to.be.a('object')
-        expect(res.body.status).to.be.an('string')
+        expect(res.body.status).to.be.a('string')
         expect(res.body.status).to.be.equal('route saved')
         done()
       })
