@@ -17,11 +17,14 @@
     "sqlite3": "^4.1.1",
     "standard": "^14.3.3"
   },
+  "dependencies": {},
   "scripts": {
     "migrate": "node model/migrate.js",
     "start": "concurrently --kill-others-on-fail \"yarn migrate\" \"standard --fix \" \"nodemon server.js\"",
     "test": "node node_modules/.bin/mocha",
     "debug": "nodemon --inspect server"
   },
-  "dependencies": {}
+  "standard": {
+    "env": [ "mocha" ]
+  }
 }
