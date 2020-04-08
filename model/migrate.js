@@ -15,4 +15,4 @@ db.run(
 
 db.run('CREATE TABLE IF NOT EXISTS price(id_price INTEGER primary key AUTOINCREMENT, price varchar(4), origin integer, dest integer, FOREIGN KEY(origin) references origin(id_origin), FOREIGN KEY(dest) references dest(id_dest))')
 
-console.info('Migration complete')
+console.info('Migration worked! :)')
